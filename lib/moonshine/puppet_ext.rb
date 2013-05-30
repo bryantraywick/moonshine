@@ -6,5 +6,5 @@ Puppet::Provider::Package::Gem.class_eval do
     end
   end
 
-  alias_method_chain :execute, :clean_env
+  alias_method_chain :execute, :execute_with_clean_env
 end
