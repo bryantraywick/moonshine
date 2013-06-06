@@ -57,7 +57,7 @@ class MoonshineSetupManifest < ShadowPuppet::Manifest
   def install_moonshine_gem
     exec 'install_moonshine_gem',
       :command => [
-        'if [ -e /tmp/moonshine_gem ] ; then rm -rf /tmp/moonshine_gem ; fi',
+        'rm -rf /tmp/moonshine_gem',
         'mkdir /tmp/moonshine_gem',
         'cd /tmp/moonshine_gem',
         'git clone https://github.com/bryantraywick/moonshine.git -b gem moonshine',
