@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Simple Rails deployment and configuration management. 15 minute deploys of Rails 2 or Rails 3 apps.}
   gem.summary       = %q{Moonshine is Rails deployment and configuration management done right.
 
-By leveraging capistrano and puppet, moonshine allows you have a working application server in 15 minutes, and be able to sanely manage it’s configuration from the comfort of your version control of choice.}
+By leveraging capistrano and puppet, moonshine allows you have a working application server in 15 minutes, and be able to sanely manage it's configuration from the comfort of your version control of choice.}
   gem.homepage      = "http://github.com/railsmachine/moonshine"
 
   gem.files         = `git ls-files`.split($\)
