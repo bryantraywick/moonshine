@@ -62,7 +62,7 @@ class MoonshineSetupManifest < ShadowPuppet::Manifest
         'git clone https://github.com/bryantraywick/moonshine.git -b gem moonshine',
         'cd /tmp/moonshine_gem/moonshine',
         'gem build moonshine.gemspec',
-        'sudo gem install moonshine-0.0.2.gem'
+        'gem install moonshine-0.0.2.gem'
       ].join(' && ')
   end
   recipe :install_moonshine_gem
