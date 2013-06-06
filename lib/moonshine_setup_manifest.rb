@@ -59,7 +59,7 @@ class MoonshineSetupManifest < ShadowPuppet::Manifest
       :command => [
         'mkdir /tmp/moonshine_gem',
         'cd /tmp/moonshine_gem',
-        'git clone https://github.com/bryantraywick/moonshine.git',
+        'git clone https://github.com/bryantraywick/moonshine.git -b gem moonshine',
         'cd /tmp/moonshine_gem/moonshine',
         'gem build moonshine.gemspec',
         'sudo gem install moonshine-0.0.2.gem'
