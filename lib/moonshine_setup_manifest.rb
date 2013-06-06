@@ -50,4 +50,20 @@ class MoonshineSetupManifest < ShadowPuppet::Manifest
     end
   end
   recipe :directories
+
+  ### Install Moonshine Gem
+  #
+  # Installs the moonshine gem
+  def install_moonshine_gem
+    exec 'install_moonshine_gem',
+      :command => [
+        'mkdir /tmp/moonshine_gem',
+        'cd /tmp/moonshine_gem',
+        'git clone https://github.com/bryantraywick/moonshine.git',
+        'cd /tmp/moonshine_gem/moonshine',
+        'gem build moonshine.gemspec',
+        'sudo gem install moonshine-0.0.2.gem'
+      ].join(' && ')
+  end
+  recipe :install_moonshine_gem
 end
