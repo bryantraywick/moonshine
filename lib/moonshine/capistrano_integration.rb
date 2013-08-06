@@ -587,6 +587,23 @@ module Moonshine
             ].join(' && ')
           end
 
+          task :src200 do
+            remove_ruby_from_apt
+            pv = "2.0.0-p247"
+            p = "ruby-#{pv}"
+            run [
+              'cd /tmp',
+              "sudo rm -rf #{p}* || true",
+              'sudo mkdir -p /usr/lib/ruby/gems/1.9/gems || true',
+              "wget -q http://ftp.ruby-lang.org/pub/ruby/2.0/#{p}.tar.gz",
+              "tar xzf #{p}.tar.gz",
+              "cd /tmp/#{p}",
+              './configure --prefix=/usr',
+              'make',
+              'sudo make install'
+            ].join(' && ')
+          end
+
           task :install_rubygems do
             version = fetch(:rubygems_version, '1.8.21')
             run [
@@ -603,7 +620,7 @@ module Moonshine
           task :install_deps do
             aptget.update
             sudo 'apt-get install -q -y build-essential zlib1g-dev libssl-dev libreadline-dev wget'
-            if fetch(:ruby) ==  'src193'
+            if fetch(:ruby) ==  'src193' or fetch(:ruby) == 'src200'
               sudo 'apt-get install -q -y libyaml-dev'
             end
           end
