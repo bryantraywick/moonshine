@@ -1,5 +1,6 @@
 pkg
 *.gem
+*.rbc
 rdoc
 doc
 coverage
@@ -10,4 +11,10 @@ spec/generator.log
 .rvmrc
 .bundle
 .DS_Store
+tmp
+.config
+.yardoc
+Gemfile.lock
+InstalledFiles
+_yardoc
 tmp

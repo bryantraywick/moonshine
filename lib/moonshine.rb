@@ -1,3 +1,4 @@
+require 'moonshine/version'
 require 'shadow_puppet'
 
 require 'erb'
