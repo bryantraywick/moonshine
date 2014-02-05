@@ -1,3 +1,4 @@
+require 'moonshine/capistrano_integration'
 <%- if options[:multistage] -%>
 set :stages, %w(staging production)
 set :default_stage, 'staging'
